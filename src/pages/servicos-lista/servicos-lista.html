@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <ion-title>Lista de Servicos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let item of servicos | async">
+            <h2> {{item.data.name}} </h2>
+            
+             <p text-right>{{ item.data.price | currency:'BRL':true }}</p>
+            <p>{{ item.data.categoryName }}</p>
+            <p text-wrap>{{ item.data.description }}</p>
+
+        </ion-item>
+      </ion-list>
+
+
+ </ion-content>

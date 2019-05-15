@@ -1,0 +1,47 @@
+
+<ion-header>
+  <ion-navbar color="blue">
+    <ion-title>Solicite seu Orçamento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <form [formGroup]="form">
+        <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="text" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Telefone</ion-label>
+            <ion-input type="text" formControlName="telefone"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Endereço</ion-label>
+            <ion-input type="text" formControlName="endereco"></ion-input>
+        </ion-item>         
+
+
+      <ion-item>
+        <ion-label stacked>Medidas</ion-label>
+        <ion-input type="text" formControlName="medidas"></ion-input>
+      </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Deixe aqui o Resumo do Serviço:</ion-label>
+        <ion-input type="text" formControlName="mensagem"></ion-input>
+    </ion-item>
+
+    <button ion-button block type="submit" (click)="onSubmit()">Enviar</button>
+    
+</form>
+
+    
+
+
+</ion-content>
+
